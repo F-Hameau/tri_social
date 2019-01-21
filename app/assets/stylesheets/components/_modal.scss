@@ -1,0 +1,32 @@
+.modal-back {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 20;
+}
+
+.active {
+  display: block;
+}
+
+.modal {
+  position: relative;
+  padding: 20px;
+  height: 90vh;
+  overflow-y: scroll;
+  position: fixed;
+  margin: auto 15%;
+  background: white;
+  z-index: 30;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+body.blocked {
+  overflow: hidden;
+}
