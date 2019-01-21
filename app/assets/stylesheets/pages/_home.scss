@@ -1,1 +1,75 @@
 // Specific CSS for your home-page
+.home-banner img {
+  max-height: 45vh;
+  max-width: 100vw;
+}
+
+.home-row {
+  width: 100%;
+  min-height: 100px;
+  padding: 15px 10px;
+  justify-content: center;
+  display: flex;
+}
+
+.green {
+  background: $green;
+}
+
+.red {
+  background: $red;
+}
+
+.blue {
+  background: $blue;
+}
+
+.yellow {
+  background: $yellow;
+}
+
+.black {
+  background: rgb(20, 20, 20);
+}
+
+.home-row-content {
+  max-width: 800px;
+  display: inline-block
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.home-row-content-elt {
+  margin: 25px 0;
+  display: flex;
+  p {
+    margin: 0;
+  }
+}
+
+.space {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  color: white;
+  margin: 0 20px;
+  font-size: 40px;
+}
+
+.icon-contact {
+  color: black;
+  margin: 10px 10vw;
+  font-size: 60px;
+}
+
+.icon-contact:hover {
+  color: white;
+}

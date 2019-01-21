@@ -1,11 +1,93 @@
 <div class="home-banner">
-  <%= image_tag "logotrisocialclubw.png", alt: "trisocialclub", height: 300 %>
+  <%= image_tag "logotrisocialclubw.png", alt: "trisocialclub" %>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+
+<div class="home-row green">
+  <div class="home-row-content">
+    <h1>présentation</h1>
+    <div class="home-row-content-elt left">
+      <!-- <i class="fas fa-question-circle icon"></i> -->
+      <h1 class="icon">🧐</h1>
+      <p>
+        Le Tri Social Club est une communauté ouverte de triathlètes sur la région de Laval.
+      </p>
+    </div>
+    <div class="home-row-content-elt right">
+      <p>
+        Privilégier la mixité sociale à travers le triathlon et ses valeurs physiques et morales: endurance et enchaînements multidisciplinaires / défi et dépassement.
+      </p>
+      <h1 class="icon">🎯</h1>
+    </div>
+    <p class="emphase">
+      Ensemble, démocratisons le triathlon !
+    </p>
+  </div>
+</div>
+
+<div class="home-row red">
+  <div class="home-row-content">
+    <h1>évènements</h1>
+    <div class="home-row-content-elt">
+      <h1 class="icon">📅</h1>
+      <p>
+        Le Tri Social Club propose à ses membres de rejoindre ou d'organiser des évènements sportifs !
+      </p>
+    </div>
+    <div class="home-row-content-elt space">
+      <h1>🏊‍♂️</h1>
+      <h1>🚴‍♂️</h1>
+      <h1>🏃‍♀️</h1>
+    </div>
+    <div class="home-row-content-elt space">
+      <button>J'organise</button>
+      <button>Je participe</button>
+    </div>
+  </div>
+</div>
+
+<div class="home-row blue">
+  <div class="home-row-content">
+    <h1>articles</h1>
+    <div class="home-row-content-elt">
+      <h1 class="icon">📚</h1>
+      <p>
+        Consultez les exploits de nos membres et partagez les votres en rédigeant un article.
+      </p>
+    </div>
+    <div class="home-row-content-elt space">
+      <button>J'écris</button>
+      <button>Je lis</button>
+    </div>
+  </div>
+</div>
+
+<div class="home-row black">
+  <div class="home-row-content">
+    <h1>Crowdfunding</h1>
+    <div class="home-row-content-elt">
+      <h1 class="icon">🎁</h1>
+      <p>
+        Vous aimez le Tri Social Club et avez envie de contribuer ? C'est ici que ça se passe !
+      </p>
+    </div>
+    <div class="home-row-content-elt space">
+      <button>J'adore ce que vous faites</button>
+    </div>
+  </div>
+</div>
+
+<div class="home-row yellow">
+  <div class="home-row-content">
+    <div class="home-row-content-elt space">
+      <%= link_to 'https://www.facebook.com/TriSocialClub', target: :_blank do %>
+        <h1 class="icon-contact"><i class="fab fa-facebook"></i></h1>
+      <% end %>
+      <%= link_to 'https://m.me/TriSocialClub?fbclid=IwAR2tE_9asn3SsbGkhBHrDNdnSXST3LKNLM4r_UNfpI07TkdHkGn_IP1iUmQ', target: :_blank do %>
+        <h1 class="icon-contact"><i class="fab fa-facebook-messenger"></i></h1>
+      <% end %><%= link_to 'https://twitter.com/TriSocialClub', target: :_blank do %>
+        <h1 class="icon-contact"><i class="fab fa-twitter"></i></h1>
+      <% end %>
     </div>
   </div>
 </div>
