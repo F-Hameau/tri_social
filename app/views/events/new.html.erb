@@ -1,0 +1,18 @@
+<div class="form-wrapper black">
+  <h1 class="left">Je créé un évènement</h1>
+
+  <%= simple_form_for @event do |f| %>
+      <%= f.input :title, required: true, placeholder: "Nom de l'évènement" %>
+      <%= f.input :sport, required: true, placeholder: 'Sport' , collection: ['Natation', 'Cyclisme', 'Course à pied', 'Autre'] %>
+      <%= f.input :date, as: :date %>
+      <%= f.input :content, required: true, as: :text, placeholder: 'Description' %>
+      <%= f.input :address, required: true, placeholder: 'Lieu' %>
+      <%= f.file_field :image, label: 'photo' %>
+      <%= f.input :photo_cache, as: :hidden %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Envoyer" %>
+      </div>
+  <% end %>
+
+</div>

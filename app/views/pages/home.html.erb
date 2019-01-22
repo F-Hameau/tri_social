@@ -40,7 +40,9 @@
       <h1>🏃‍♀️</h1>
     </div>
     <div class="home-row-content-elt space">
-      <button>J'organise</button>
+      <%= link_to new_event_path do %>
+        <button>J'organise</button>
+      <% end %>
       <button>Je participe</button>
     </div>
   </div>
@@ -92,9 +94,3 @@
   </div>
 </div>
 
-<!-- <div class="modal-back active">
-  <div class="modal active">
-
-
-  </div>
-</div> -->
