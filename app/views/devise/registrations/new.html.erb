@@ -6,12 +6,12 @@
 
     <div class="form-inputs">
 
-      <%= f.input :name, required: true , placeholder: 'Slipman', error: 'Le nom doit être complété' %>
+      <%= f.input :name, required: true , placeholder: 'Slipman', error: 'Le nom doit être complété', autofocus: true , input_html: { autocomplete: "email" } %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.input :email, required: true, placeholder: 'slipman@gmail.com', error: "L'email doit être complété" %>
-      <%= f.input :password, required: true, placeholder: 'Mot de passe', error: 'Le mot de passe doit contenir au moins 1 chiffre et 1 lettre et être composé de 8 caractères' %>
-      <%= f.input :password_confirmation, required: true, placeholder: 'Confirmation mot de passe' %>
+      <%= f.input :password, required: true, placeholder: 'Mot de passe', error: 'Le mot de passe doit contenir au moins 1 chiffre et 1 lettre et être composé de 8 caractères', input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation, required: true, placeholder: 'Confirmation mot de passe', input_html: { autocomplete: "new-password" } %>
     </div>
 
     <div class="form-actions">

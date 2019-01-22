@@ -7,8 +7,6 @@
       <%= f.input :date, as: :date %>
       <%= f.input :content, required: true, as: :text, placeholder: 'Description' %>
       <%= f.input :address, required: true, placeholder: 'Lieu' %>
-      <%= f.file_field :image, label: 'photo' %>
-      <%= f.input :photo_cache, as: :hidden %>
 
       <div class="form-actions">
         <%= f.button :submit, "Envoyer" %>

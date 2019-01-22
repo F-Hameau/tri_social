@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
+gem 'jquery-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
