@@ -60,8 +60,12 @@
       </p>
     </div>
     <div class="home-row-content-elt space">
-      <button>J'écris</button>
-      <button>Je lis</button>
+      <%= link_to new_article_path do %>
+        <button>J'écris</button>
+      <% end %>
+      <%= link_to articles_path do %>
+        <button>Je lis</button>
+      <% end %>
     </div>
   </div>
 </div>

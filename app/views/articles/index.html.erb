@@ -1,0 +1,25 @@
+<div class="form-wrapper green">
+  <h1 class="left">Articles</h1>
+  <p class="left"><em><%= @articles.all.count %> articles</em></p>
+
+  <% @articles.each do |article| %>
+    <div class="card-link">
+      <%= link_to article_path(article) do %>
+        <div class="card-container">
+          <div class="card-row">
+            <h2><%= article.title %></h2>
+          </div>
+          <div class="card-row">
+            <p><em>Créé par <%= article.user.name %></em></p>
+            <div class="card-row">
+              <h3>
+                <%= article.created_at.day %> <%= article.created_at.month %> <%= article.created_at.year %>
+              </h3>
+              <h1 class="icon">📅</h1>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

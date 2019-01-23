@@ -1,0 +1,15 @@
+<div class="form-wrapper blue">
+  <h1 class="left">
+    <%= @article.title %>
+  </h1>
+  <p class="left"><em>Rédigé par <%= @article.user.name %></em></p>
+  <div class="home-row-content-elt">
+    <p class="left" id="show-editor">
+      <%= @article.content %>
+    </p>
+    <div class="left" id="show-preview">
+    </div>
+  </div>
+    <%= link_to 'Supprimer', article_delete_path(@article), method: :delete, data: { confirm: "Supprimer définitivement ?" } if @user == @article.user || @user.admin == true %>
+    <%= link_to 'Modifier', edit_article_path(@article), method: :edit if @user == @article.user || @user.admin == true %>
+</div>
