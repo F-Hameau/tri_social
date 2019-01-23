@@ -1,0 +1,36 @@
+.card-container {
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  h2 {
+    color: rgb(50, 50, 50);
+    margin-top: 0px;
+  }
+  p {
+    color: rgb(50, 50, 50);
+  }
+  h3 {
+    color: rgb(50, 50, 50);
+    margin-top: 0px;
+    font-size: 30px;
+  }
+}
+
+.card-link a {
+  margin: 0px;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

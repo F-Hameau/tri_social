@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Evènements", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Évènements", events_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Articles", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Crowdfunding", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
@@ -43,9 +43,16 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li>
+          <%= link_to edit_user_registration_path do %>
+            <i class="fa fa-user"></i> <%= t(".profile", default: current_user.name) %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to '/users/sign_out', :method => :delete do %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>

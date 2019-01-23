@@ -1,2 +1,34 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="form-wrapper green left">
+  <h1>Évènements</h1>
+  <p><em><%= @events.all.count %> évènement(s)</em></p>
+
+  <% @events.each do |event| %>
+    <div class="card-link">
+      <%= link_to event_path(event) do %>
+        <div class="card-container">
+          <div class="card-row">
+            <h2><%= event.title %></h2>
+            <h1 class="icon"><% if event.sport == 'Natation' %>
+              🏊‍♂️
+            <% elsif event.sport == 'Course à pied' %>
+              🏃‍♀️
+            <% elsif event.sport == 'Cyclisme' %>
+              🚴‍♂️
+            <% else %>
+              🎽
+            <% end %></h1>
+          </div>
+          <div class="card-row">
+            <p><em>Créé par <%= event.user.name %></em></p>
+            <div class="card-row">
+              <h3>
+                <%= event.date.day %> <%= event.date.month %> <%= event.date.year %>
+              </h3>
+              <h1 class="icon">📅</h1>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
