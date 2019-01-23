@@ -1,12 +1,11 @@
-<div class="form-wrapper blue">
+<div class="form-wrapper green">
   <h1 class="left">
     <%= @article.title %>
   </h1>
   <p class="left"><em>Rédigé par <%= @article.user.name %></em></p>
   <div class="home-row-content-elt">
-    <p class="left" id="show-editor">
-      <%= @article.content %>
-    </p>
+      <textarea type="hidden" id="show-editor" class="black-font" name="" id="" cols="30" rows="10"><%= @article.content %></textarea>
+
     <div class="left" id="show-preview">
     </div>
   </div>
