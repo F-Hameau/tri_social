@@ -50,5 +50,23 @@
     <%= button_to 'Je rejoins', events_join_path(id: @event.id) %>
     <%= button_to 'En fait non', events_quit_path(id: @event.id) %>
   </div>
+  <h1 class="left">Messages</h1>
+  <% @event.comment_ids.each do |id| %>
+    <% comment = Comment.find(id) %>
+    <div class="message-container">
+      <div class="avatar-container">
+        <%= cl_image_tag comment.user.photo, alt: "alttext", class: "message-avatar" %>
+      </div>
+      <p class="message-info"><em>Rédigé par <%= comment.user.name %></em></p>
+      <div class="left message"><%= comment.content %></div>
+    </div>
+  <% end %>
+  <%= simple_form_for @comment, url: comments_path(@event.id) do |f| %>
+      <%= f.input :content, required: true, as: :text, placeholder: 'Nouveau message' %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Envoyer" %>
+      </div>
+  <% end %>
 </div>
 
