@@ -2,7 +2,7 @@
   <h1>Évènements à venir</h1>
   <p><em><%= @events.where('created_at >= ?', Date.today).count %> évènement(s)</em></p>
 
-  <% @events.where('created_at <= ?', Date.today).each do |event| %>
+  <% @events.where('created_at >= ?', Date.today).each do |event| %>
     <div class="card-link">
       <%= link_to event_path(event) do %>
         <div class="card-container">
