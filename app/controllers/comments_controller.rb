@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def create
-    raise
     @event = Event.find(params[:format].to_i)
     @comment = Comment.new(comment_params)
     @comment.event = @event
