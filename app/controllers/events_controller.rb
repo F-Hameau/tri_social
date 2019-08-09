@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
   def index
     @events = Event.all
+    @count = Event.all.where('created_at >= ?', Date.today).count
   end
 
   def new

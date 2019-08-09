@@ -1,6 +1,6 @@
 <div class="form-wrapper green left">
   <h1>Évènements à venir</h1>
-  <p><em><%= @events.where('created_at >= ?', Date.today).count %> évènement(s)</em></p>
+  <p><em><%= @count %> <%= @count > 1 ? 'évènements' : 'évènement'%> à venir</em></p>
 
   <% @events.where('created_at >= ?', Date.today).each do |event| %>
     <div class="card-link">
