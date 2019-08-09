@@ -9,6 +9,6 @@
     <div class="left" id="show-preview">
     </div>
   </div>
-    <%= link_to 'Supprimer', article_delete_path(@article), method: :delete, data: { confirm: "Supprimer définitivement ?" } if @user == @article.user || @user.admin == true %>
-    <%= link_to 'Modifier', edit_article_path(@article), method: :edit if @user == @article.user || @user.admin == true %>
+    <%= link_to 'Supprimer', article_delete_path(@article), method: :delete, data: { confirm: "Supprimer définitivement ?" } if user_signed_in? && @user == @article.user || user_signed_in? && @user.admin == true %>
+    <%= link_to 'Modifier', edit_article_path(@article), method: :edit if user_signed_in? && @user == @article.user || user_signed_in? && @user.admin == true %>
 </div>
