@@ -2,7 +2,7 @@
   <h1 class="left">Articles</h1>
   <p class="left"><em><%= @articles.all.count %> articles</em></p>
 
-  <% @articles.each do |article| %>
+  <% @articles.sort_by(&:created_at).reverse.each do |article| %>
     <div class="card-link">
       <%= link_to article_path(article) do %>
         <div class="card-container">
